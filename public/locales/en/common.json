@@ -1,0 +1,19 @@
+{
+    "add-to-cart": "Add to Cart",
+    "buy-now": "Buy Now",
+    "qty": "Quantity",
+    "details": "Details",
+    "you-may-also-like": "You may also like",
+    "best-sellers": "Best Sellers",
+    "redirecting" : "Redirecting...",
+    "items" : "items",
+    "your-cart" : "Your cart",
+    "your-shopping-cart-is-empty" : "Your shopping cart is empty",
+    "pay-with-stripe" : "Pay with Stripe",
+    "continue-shopping" : "Continue Shopping",
+    "added-to-the-cart" : "added to the cart.",
+    "subtotal" : "Subtotal",
+    "thank-you" : "Thank you for your order!",
+    "check-email-for-receipt" : "Please check your Email inbox for the receipt.",
+    "if-any-questions-please-email" : "If you have any questions, please email"
+}

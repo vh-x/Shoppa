@@ -1,0 +1,19 @@
+{
+    "add-to-cart": "カートに追加",
+    "buy-now": "今すぐ買う",
+    "qty": "数量",
+    "details": "詳細",
+    "you-may-also-like": "おすすめ商品",
+    "best-sellers": "人気商品",
+    "redirecting" : "リダイレクト中…",
+    "items" : "点の商品",
+    "your-cart" : "カート",
+    "your-shopping-cart-is-empty" : "カートは空です",
+    "pay-with-stripe" : "Stripeで支払う",
+    "continue-shopping" : "買い物を続ける",
+    "added-to-the-cart" : "がカートに追加されました。",
+    "subtotal" : "合計",
+    "thank-you" : "ご注文いただきましてありがとうございます。",
+    "check-email-for-receipt" : "レシートメールをご確認ください。",
+    "if-any-questions-please-email" : "お問い合わせメールは、こちらまでお願い致します。"
+}

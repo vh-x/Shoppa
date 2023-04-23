@@ -1,0 +1,19 @@
+{
+    "add-to-cart": "加入購物車",
+    "buy-now": "立即購買",
+    "qty": "數量",
+    "details": "說明",
+    "you-may-also-like": "猜你喜歡",
+    "best-sellers": "熱門商品",
+    "redirecting" : "導向中…",
+    "items" : "件商品",
+    "your-cart" : "購物車",
+    "your-shopping-cart-is-empty" : "購物車是空的",
+    "pay-with-stripe" : "以 Stripe 付款",
+    "continue-shopping" : "繼續購物",
+    "added-to-the-cart" : "已加入購物車",
+    "subtotal" : "總金額",
+    "thank-you" : "感謝您的購買",
+    "check-email-for-receipt" : "請您確認 Email 收據",
+    "if-any-questions-please-email" : "如果有任何問題，請 Email 到"
+}
