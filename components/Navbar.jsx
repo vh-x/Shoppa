@@ -19,13 +19,17 @@ const Navbar = () => {
         <span>SHOPPA</span>
       </Link>
       <div className="nav-icons">
-        <button type="button" onClick={() => setShowCart(true)}>
+        <button
+          aria-label="show cart"
+          type="button"
+          onClick={() => setShowCart(true)}
+        >
           <AiOutlineShopping />
           <span className="cart-item-qty">{totalQty}</span>
         </button>
 
         <div className="dropdown">
-          <button className="dropbtn">
+          <button aria-label="show language menu" className="dropbtn">
             <AiOutlineGlobal />
           </button>
           <div className="dropdown-content">

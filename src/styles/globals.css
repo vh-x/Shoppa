@@ -110,7 +110,6 @@ width: 100%;
 }
 .product-card{
   cursor: pointer;
-  transform: scale(1, 1);
   transition: transform 0.5s ease;
   color: var(--secondary-color);
 }
@@ -392,7 +391,6 @@ padding: 30px 65px;
   border-radius: 15px;
   border: none;
   font-size: 20px;
-  margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
   background-color: var(--main-color);
