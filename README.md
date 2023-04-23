@@ -2,11 +2,12 @@
 
 SHOPPA is a simple e-commerce website built with Next.js.
 
+
 ## Features
 
 - Add items to a cart
 - Update quantities of items or remove items in the cart
-- Make payments checkout
+- Make payments via Stripe Checkout
 - Languages supported: English, Japanese and Traditional Chinese.
 
 ## Technologies
