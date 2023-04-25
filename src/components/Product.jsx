@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { urlFor } from "../lib/client";
 import { priceFormat } from "../lib/priceFormat";
-import { useRouter } from "../node_modules/next/router";
+import { useRouter } from "next/router";
 
 const Product = ({ product: { name, image, slug, price } }) => {
   const locale = useRouter().locale;

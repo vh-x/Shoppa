@@ -1,5 +1,5 @@
 import { urlFor } from "../lib/client";
-import { useRouter } from "../node_modules/next/router";
+import { useRouter } from "next/router";
 const HeroBanner = ({ heroBanner }) => {
   const locale = useRouter().locale;
   return (

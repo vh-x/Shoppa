@@ -1,10 +1,7 @@
-import Link from "next/link";
 import { urlFor } from "../lib/client";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "../node_modules/next/router";
+import { useRouter } from "next/router";
 
 const FooterBanner = ({ footerBanner: { image, largeText, midText } }) => {
-  const { t } = useTranslation("common");
   const locale = useRouter().locale;
   return (
     <div

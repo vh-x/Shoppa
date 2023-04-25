@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { client, urlFor } from "../../../lib/client";
+import { client, urlFor } from "../../lib/client";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
-import { Product } from "../../../components";
-import { useStateContext } from "../../../context/StateContext";
-import { priceFormat } from "../../../lib/priceFormat";
-import getStripe from "../../../lib/getStripe";
-import { toast } from "../../../node_modules/react-hot-toast/dist/index";
+import { Product } from "../../components";
+import { useStateContext } from "../../context/StateContext";
+import { priceFormat } from "../../lib/priceFormat";
+import { toast } from "react-hot-toast";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import getStripe from "../../lib/getStripe";
 
 const ProductDetails = ({ products, product }) => {
   const { t } = useTranslation("common");

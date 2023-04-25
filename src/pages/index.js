@@ -1,6 +1,6 @@
 import React from "react";
-import { FooterBanner, HeroBanner, Product } from "../../components";
-import { client } from "../../lib/client";
+import { FooterBanner, HeroBanner, Product } from "../components";
+import { client } from "../lib/client";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
-import { useStateContext } from "../../context/StateContext";
+import { useStateContext } from "../context/StateContext";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 

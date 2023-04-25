@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useTranslation } from "next-i18next";
-import { useRouter } from "../node_modules/next/router";
+import { useRouter } from "next/router";
 
 const Context = createContext();
 
