@@ -5,7 +5,7 @@ module.exports = {
     defaultLocale: "en",
     locales: ["en", "ja", "zh"],
     nonExplicitSupportedLngs: true,
-    load: languageOnly,
+    load: "languageOnly",
     fallbackLng: {
       default: ["en"],
     },
