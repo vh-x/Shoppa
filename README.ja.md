@@ -15,7 +15,7 @@ SHOPPA は多言語に対応したシンプルな e コマースのウェブサ�
 - Stripe Checkout 経由でのお支払い
 - 対応言語：英語、日本語、中国語。
 
-## Technologies
+## 技術
 
 - React
 - TypeScript
