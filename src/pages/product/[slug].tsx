@@ -14,13 +14,20 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import getStripe from "../../lib/getStripe";
+import { SanityProduct } from "../../types/sanityTypes";
 
-const ProductDetails = ({ products, product }) => {
+const ProductDetails = ({
+  products,
+  product,
+}: {
+  products: SanityProduct;
+  product: SanityProduct;
+}) => {
   const { t } = useTranslation("common");
   const { image, name, details, price, rating, source, numReviews } = product;
   const [index, setIndex] = useState(0);
   const { moreQty, lessQty, qty, onAdd, setQty } = useStateContext();
-  const locale = useRouter().locale;
+  const locale = useRouter().locale || "en";
 
   const handleBuyNow = async () => {
     const stripe = await getStripe();
@@ -37,10 +44,10 @@ const ProductDetails = ({ products, product }) => {
         },
       ]),
     });
-    if (response.statusCode === 500) return;
+    if (response.status === 500) return;
     const data = await response.json();
     toast.loading(t("redirecting"));
-    stripe.redirectToCheckout({ sessionId: data.id });
+    stripe && stripe.redirectToCheckout({ sessionId: data.id });
   };
   useEffect(() => setQty(1), [product]);
   return (
@@ -48,14 +55,16 @@ const ProductDetails = ({ products, product }) => {
       <div className="product-detail-container">
         <div className="image-container">
           <img
-            src={urlFor(image && image[index])}
+            alt="product detail image"
+            src={urlFor(image && image[index]).toString()}
             className="product-detail-image"
           />
           <div className="small-images-container">
-            {image?.map((item, i) => (
+            {image?.map((item: SanityProduct, i: number) => (
               <img
+                alt="small image"
                 key={i}
-                src={urlFor(item)}
+                src={urlFor(item).toString()}
                 className={`small-image ${i === index && "selected-image"}`}
                 onMouseEnter={() => setIndex(i)}
               />
@@ -109,7 +118,7 @@ const ProductDetails = ({ products, product }) => {
         <h2>{t("you-may-also-like")}</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
-            {products.map((product) => (
+            {products.map((product: SanityProduct) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
@@ -123,7 +132,7 @@ export const getStaticPaths = async () => {
   const query = '*[_tyle == "product"] {slug {surrent}}';
   const products = await client.fetch(query);
 
-  const paths = products.map((product) => ({
+  const paths = products.map((product: SanityProduct) => ({
     params: {
       slug: product.slug.current,
     },
@@ -131,7 +140,13 @@ export const getStaticPaths = async () => {
   return { paths, fallback: "blocking" };
 };
 
-export const getStaticProps = async ({ locale, params: { slug } }) => {
+export const getStaticProps = async ({
+  locale,
+  params: { slug },
+}: {
+  locale: string;
+  params: any;
+}) => {
   const query = `*[_type == "product" && slug.current == "${slug}"][0]`;
   const productsQuery = '*[_type == "product"]';
 

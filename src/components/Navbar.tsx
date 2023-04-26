@@ -5,10 +5,10 @@ import Cart from "./Cart";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const { totalQty, showCart, setShowCart } = useStateContext();
+  const { totalQty, showCart, setShowCart }: any = useStateContext();
   const router = useRouter();
 
-  const onToggleLang = (locale) => {
+  const onToggleLang = (locale: string) => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale });
   };

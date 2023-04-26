@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -24,8 +24,8 @@ const Cart = () => {
     setShowCart,
     toggleCartItemQtyBy,
     removeCartItem,
-  } = useStateContext();
-  const locale = useRouter().locale;
+  }: any = useStateContext();
+  const locale: string = useRouter().locale || "en";
   const { t } = useTranslation("common");
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -35,21 +35,21 @@ const Cart = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(
-        cartItems.map((item) => {
+        cartItems.map((item: any) => {
           return { ...item, name: item.name[locale] };
         })
       ),
     });
-    if (response.statusCode === 500) return;
+    if (response.status === 500) return;
     const data = await response.json();
     toast.loading("Redirecting...");
-    stripe.redirectToCheckout({ sessionId: data.id });
+    stripe && stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
     <div
       className="cart-wrapper"
-      onClick={(e) =>
+      onClick={(e: any) =>
         e.target.classList[0] == "cart-wrapper" && setShowCart(false)
       }
     >
@@ -82,10 +82,10 @@ const Cart = () => {
         )}
         <div className="product-container">
           {cartItems.length > 0 &&
-            cartItems.map((item, i) => (
+            cartItems.map((item: any) => (
               <div className="product" key={item._id}>
                 <img
-                  src={urlFor(item?.image[0])}
+                  src={urlFor(item?.image[0]).toString()}
                   className="cart-product-image"
                   alt="cart product image"
                 />
@@ -113,6 +113,7 @@ const Cart = () => {
                       </p>
                     </div>
                     <button
+                      title="remove-item"
                       type="button"
                       className="remove-item"
                       onClick={() => removeCartItem(item)}

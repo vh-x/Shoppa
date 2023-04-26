@@ -3,8 +3,15 @@ import { FooterBanner, HeroBanner, Product } from "../components";
 import { client } from "../lib/client";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { SanityProduct, SanityBanner } from "../types/sanityTypes";
 
-const Home = ({ products, banners }) => {
+const Home = ({
+  products,
+  banners,
+}: {
+  products: SanityProduct;
+  banners: SanityBanner;
+}) => {
   const { t } = useTranslation("common");
   return (
     <>
@@ -13,7 +20,7 @@ const Home = ({ products, banners }) => {
         <h2>{t("best-sellers")}</h2>
       </div>
       <div className="products-container">
-        {products?.map((product) => {
+        {products?.map((product: SanityProduct) => {
           return <Product key={product._id} product={product} />;
         })}
       </div>
@@ -23,7 +30,7 @@ const Home = ({ products, banners }) => {
 };
 
 export default Home;
-export const getServerSideProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }: { locale: string }) => {
   const productQuery = '*[_type== "product"]';
   const products = await client.fetch(productQuery);
   const bannerQuery = '*[_type== "banner"]';

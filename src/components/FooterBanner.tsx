@@ -1,7 +1,12 @@
 import { urlFor } from "../lib/client";
 import { useRouter } from "next/router";
+import { SanityBanner } from "../types/sanityTypes";
 
-const FooterBanner = ({ footerBanner: { image, largeText, midText } }) => {
+const FooterBanner = ({
+  footerBanner: { image, largeText, midText },
+}: {
+  footerBanner: SanityBanner;
+}) => {
   const locale = useRouter().locale;
   return (
     <div

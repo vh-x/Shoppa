@@ -1,6 +1,6 @@
 {
-  "name": "Next.js-E-Commerce-Project",
-  "version": "0.0.1",
+  "name": "ec",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,20 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "^7.21.4",
     "@sanity/client": "^5.4.2",
     "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^1.52.1",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "i18next": "^22.4.15",
-    "next": "13.3.0",
+    "@types/node": "18.16.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "13.3.1",
     "next-i18next": "^13.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
-    "react-i18next": "^12.2.0",
     "react-icons": "^4.8.0",
-    "stripe": "^12.1.1"
+    "stripe": "^12.2.0",
+    "typescript": "5.0.4"
   }
 }

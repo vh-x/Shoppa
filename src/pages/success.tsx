@@ -28,7 +28,7 @@ const Success = () => {
           order@example.com
         </a>
         <Link href="/">
-          <button type="button" className="btn" width="300px">
+          <button type="button" className="btn">
             {t("continue-shopping")}
           </button>
         </Link>
@@ -37,7 +37,7 @@ const Success = () => {
   );
 };
 export default Success;
-export const getServerSideProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }: { locale: string }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

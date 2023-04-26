@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { ReactNode } from "react";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="layout">
       <Head>
         <title>SHOPPA</title>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <header>
         <Navbar />
