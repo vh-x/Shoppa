@@ -2,7 +2,7 @@
 |
 日本語
 |
-[**繁體中文**](https://github.com/vkhx/shoppa/blob/master/README.zh-TW.md)
+[**中文**](https://github.com/vkhx/shoppa/blob/master/README.zh.md)
 
 # SHOPPA
 
@@ -13,7 +13,7 @@ SHOPPA は多言語に対応したシンプルな e コマースのウェブサ�
 - カートに商品を追加する
 - カート内の商品の数量を更新する
 - Stripe Checkout 経由でのお支払い
-- 対応言語：英語、日本語、繁体中国語。
+- 対応言語：英語、日本語、中国語。
 
 ## 技術
 

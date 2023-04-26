@@ -751,11 +751,10 @@ margin-top: 160px;
 
 .dropdown-content div {
   color: black;
-  padding: 15px 12px;
+  padding: 10px 12px;
   text-decoration: none;
   display: block;
   cursor: pointer;
-  width:100px;
 }
 
 .dropdown-content div:first-child {

@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="dropdown-content">
             <div onClick={() => onToggleLang("en")}>English</div>
             <div onClick={() => onToggleLang("ja")}>日本語</div>
-            <div onClick={() => onToggleLang("zh")}>繁體中文</div>
+            <div onClick={() => onToggleLang("zh")}>中文</div>
           </div>
         </div>
       </div>
