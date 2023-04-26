@@ -7,6 +7,7 @@ module.exports = {
   },
   fallbackLng: {
     default: ["en"],
+    "zh-TW": ["zh"],
   },
   localePath: path.resolve("./public/locales"),
 };
