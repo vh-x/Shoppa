@@ -4,6 +4,7 @@ import { Layout } from "../components";
 import { StateContext } from "../context/StateContext";
 import { Toaster } from "react-hot-toast";
 import { appWithTranslation } from "next-i18next";
+import { Analytics } from "@vercel/analytics/react";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +12,7 @@ function App({ Component, pageProps }: AppProps) {
       <Layout>
         <Toaster position="bottom-center" />
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </StateContext>
   );
