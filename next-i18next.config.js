@@ -5,9 +5,10 @@ module.exports = {
     defaultLocale: "en",
     locales: ["en", "ja", "zh"],
   },
+  nonExplicitSupportedLngs: true,
+  load: languageOnly,
   fallbackLng: {
     default: ["en"],
-    "zh-TW": ["zh"],
   },
   localePath: path.resolve("./public/locales"),
 };
