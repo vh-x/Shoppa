@@ -1,6 +1,12 @@
+English
+|
+[**日本語**](https://github.com/vkhx/shoppa/blob/master/README.ja.md)
+|
+[**中文**](https://github.com/vkhx/shoppa/blob/master/README.zh.md)
+
 # SHOPPA
 
-SHOPPA is a simple e-commerce website built with Next.js.
+SHOPPA is a simple e-commerce website with multi-language support.
 
 ## Features
 
@@ -26,7 +32,7 @@ SHOPPA is a simple e-commerce website built with Next.js.
 
 ## Installation
 
-To run this project locally, you'll need to have Node.js and npm installed on your computer. You can install them from https://nodejs.org/
+To run this project locally, you'll need to have Node.js and npm installed on your computer. You can install them from https://nodejs.org/en
 
 1. Clone the repository:
 
