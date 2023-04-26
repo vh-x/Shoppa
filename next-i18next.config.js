@@ -4,9 +4,9 @@ module.exports = {
   i18n: {
     defaultLocale: "en",
     locales: ["en", "ja", "zh"],
-    nonExplicitSupportedLngs: true,
-    load: "languageOnly",
     fallbackLng: {
+      "zh-TW": ["zh"],
+      "zh-Hant": ["zh"],
       default: ["en"],
     },
   },
